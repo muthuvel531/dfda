@@ -1,44 +1,124 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    6.table = int(input("Which table? "))
-    n = int(input("Enter the limit: "))
-    
-    for i in range(1, n+1):
-    print(table, "*", i, "=", table*i)
-    output:
-    Which table? 2
-    Enter the limit: 5
-    
-    2 * 1 = 2
-    2 * 2 = 4
-    2 * 3 = 6
-    2 * 4 = 8
-    2 * 5 = 10
+	1.AREA OF DIFFERENT SHAPES.	
+NO:24uca531	
+print("Area of circle")
+pi=3.14
+r=float(input("Enter tha redius"))
+area=pi*r*r
+print("Area of circle is:",area)
+print("Area of square")
+a=float(input("Enter tha side :"))
+area=a*a
+print("Area of equare is:",area)
+print("Area of rectangle")
+l=float(input("Enter tha length:"))
+b=float(input("Enter tha breath:"))
+area=l*b
+print("area of rectangle is",area)
 
+'''
+Output
+Area of circle
+Enter tha redius2
+Area of circle is: 12.56
+Area of square
+Enter tha side :3
+Area of equare is: 9.0
+Area of rectangle
+Enter tha length:2 
+Enter tha breath:3
+area of rectangle is 6.0
+2.prime number
+NO:24uca531
+n=int(input("Enter tha number:"))
+flag=False
+if n>1:
+ for i in range(2,n):
+  if(n%i==0):
+     flag=True
+     break
+if flag:
+ print(n,"is not a prime number")
+else:
+ print(n,"is a prime number")
 
-    
-    7.n = int(input("Enter a number: "))
-    rev = 0
-    
-    while n > 0:
-    r = n % 10
-    rev = rev * 10 + r
-    n = n // 10
-    
-    print("Reverse of the given number is:", rev)
-    output:
-    Enter a number: 543
-    Reverse of the given number is: 345
+ '''
+output
+Enter tha number:7
+7 is a prime number
+'''
+3.fibonacci series cenesation
+NO:24uca531
+n=int(input("Enter tha Number :"))
+print("FiBONACCI SEIES")
+a,b=-1,1
+c=0
+for i in range(n):
+    c=a+b
+    print(c)
+    a=b
+    b=c
+'''
+output
+Enter tha Number :5
+FiBONACCI SEIES
+0
+1
+1
+2
+3
+'''
+5.factorial of a given number
+NO:24uca531
+n=int(input("Enter tha number"))
+fact=1
+if(n<0):
+    print("factorial does not exist")
+elif(n==0):
+        print("factorial of 0 is 1")
+else:
+    for i in range(1,n+1):
+        fact=fact*i
+    print("tha pactorial of",n,"is",fact)
+        
+'''
+output
+Enter tha number5
+tha pactorial of 5 is 120
+'''
+            6.generation of multiplication table
+NO:24uca531
+table=int(input("Which table?"))
+n=int(input("Enter tha number"))
+for i in range(1,n+1):
+    print(table,"*",i,"=",table*i)
 
-
-
-    8.n = int(input("Enter number of rows: "))
+'''
+oupput
+Which table?2
+Enter tha number5
+2 * 1 = 2
+2 * 2 = 4
+2 * 3 = 6
+2 * 4 = 8
+2 * 5 = 10
+'''
+7.revesing a given number
+NO:24uca531
+n=int(input("Enter tha number"))
+rev=0
+while(n>0):
+    r=n%10
+    rev=(rev*10)+r
+    n=n//10
+print("Reverse of tha given number is:",rev)
+'''
+output
+Enter tha number543
+Reverse of tha given number is: 345
+'''
+8.star pyramid
+NO:24uca531
+n = int(input("Enter number of rows: "))
     
     for i in range(1, n+1):
     print(" "*(n-i), end="")
@@ -54,46 +134,36 @@
 
 
     9.print("Enter numbers separated by space:")
-    lst = list(map(int, input().split()))
-    
+    lst = list(map(int, input().split())
     print("Maximum value is:", max(lst))
     print("Minimum value is:", min(lst))
     output:
     Enter numbers separated by space:
-    2 4 6 8 10
-    
+    2 4 6 8 1
     Maximum value is: 10
     Minimum value is: 2
-
-
 
     10.def findall(lst):
     positive = 0
     negative = 0
     zero = 0
-    
     for x in lst:
     if x > 0:
     positive += 1
     elif x < 0: negative +=1 else: zero +=1 print("No of positive numbers:", positive) print("No of negative numbers:",
         negative) print("No of zeros:", zero) lst=list(map(int, input("Enter numbers: ").split()))
     findall(lst)
-    output:Enter numbers: 12 40 -23 -4 0
-
+    output:
+Enter numbers: 12 40 -23 -4 0
 No of positive numbers: 2
 No of negative numbers: 2
 No of zeros: 1
-
-
-
 
 11.import array as arr
 
 # create array
 array1 = arr.array('i', [int(x) for x in input("Enter elements: ").split()])
-
 print("Original array:", array1)
-
 # Append
 n = int(input("Enter element to append: "))
 array1.append(n)
@@ -104,30 +174,25 @@ p = int(input("Enter position: "))
 v = int(input("Enter value: "))
 array1.insert(p, v)
 print("After insert:", array1)
-
 # Pop
 a = int(input("Enter index to pop: "))
 array1.pop(a)
 print("After pop:", array1)
-
 # Remove
 r = int(input("Enter element to remove: "))
 array1.remove(r)
 print("After remove:", array1)
-
 # Reverse
 array1.reverse()
 print("After reverse:", array1)
-
 # Length
 print("Length:", len(array1))
-
 # Sum
 print("Sum:", sum(array1))
-
 # Convert to list
 print("Array to list:", array1.tolist())
-output:Enter elements: 1 2 3 4
+output:
+Enter elements: 1 2 3 4
 Original array: array('i', [1, 2, 3, 4])
 Enter element to append: 5
 After append: array('i', [1, 2, 3, 4, 5])
@@ -144,58 +209,45 @@ Sum: 12
 Array to list: [5, 4, 2, 1]
 
 
-
 12.n = int(input("Enter n: "))
-
 total = 0
 for i in range(1, n+1):
-    total = total + i
-
+ total = total + i
 print("Sum =", total)
-output:Enter n: 5
+output:
+n: 5
 Sum = 15
 
 
 
 13.text = input("Enter a string: ")
-
 count = 0
-
 for ch in text:
     if ch in "aeiouAEIOU":
         count += 1
-
 print("Number of vowels =", count)
-output:Enter a string: welcome
+output:
+Enter a string: welcome
 Number of vowels = 3
 
-
-
-
 14.import numpy as np
-
 A = np.array([[1,2,3],[4,5,6]])
 B = np.array([[1,2],[3,4],[5,6]])
-
 C = np.dot(A,B)
-
 print("Matrix A:")
 print(A)
-
 print("Matrix B:")
 print(B)
-
 print("Multiplication Result:")
 print(C)
-output:Matrix A
+output:
+:Matrix A
 [[1 2 3]
  [4 5 6]]
-
 Matrix B
 [[1 2]
  [3 4]
  [5 6]]
-
 Multiplication Result
 [[22 28]
  [49 64]]
@@ -203,111 +255,218 @@ Multiplication Result
 
 
  15.text = "Hello everybody"
-
 print("Original:", text)
-
 print("Find:", text.find("body"))
-
 print("Replace:", text.replace("body","Everybody"))
-
 print("Count of 'o':", text.count("o"))
-
 print("Upper:", text.upper())
-
 print("Lower:", text.lower())
-
 print("Swapcase:", text.swapcase())
+
 output:
+Enter this string:Good evening Everyon
+Good eveningEveryon
+Using fin():method
+Enter a string to be find:one
+18
+Enter this string:one
+Enter this Sring:dobg
+Good Evening Everybody
+Using count():methid
+Enter a charecte :e
+The occurance of e is 3 times
+Enter aString:good
+Enter this number:4
+God God God 
+Usinguppent:method 
+God Evening EvERyone 
 
 
+16.print("TUPLE METHOOD")
+tuple=eval(input("Enter the value:"))
+print(tuple)
+print("Using index():method")
+n=int(input("Enter the value:"))
+x=tuple.index(n)
+print("The value",n,"is the index position",x)
+print("Using count():method")
+n=int(input("Enter the value:"))
+x=tuple.count(n)
+print("The occurance of",n,"in the tuple is",x,"times")
+print("Using max():method")
+x=min(tuple)
+print("The maximum value inn the tuple is",x)
+print("Using max():method")
+x=max(tuple)
+print("The maximum value in the tuple is",x)
+print("Using sorted():method")
+x=sorted(tuple)
+print("The sorted tuple is:",x)
+print("Using len():method")
+l=len(tuple)
+print("The length of the tuple is ",l)
+print("Using sum():method")
+s=sum(tuple)
+print("The sum of tuple is",s)
 
-16.t = (1,4,7,6,5,3,2)
 
-print("Tuple:", t)
+"""
+OUTPUT
+TUPLE METHOOD
+Enter the value:1,4,7,6,5,3,2
+(1, 4, 7, 6, 5, 3, 2)
+Using index():method
+Enter the value:4
+The value 4 is the index position 1
+Using count():method
+Enter the value:2
+The occurance of 2 in the tuple is 1 times
+Using max():method
+The maximum value inn the tuple is 1
+Using max():method
+The maximum value in the tuple is 7
+Using sorted():method
+The sorted tuple is: [1, 2, 3, 4, 5, 6, 7]
+Using len():method
+The length of the tuple is  7
+Using sum():method
+The sum of tuple is 28
+"""
 
-print("Index of 4:", t.index(4))
+17. print("LIST METHOD")
+list=[int(x)for x in input("Enter the element:").split()]
+print("The element of list are:",list)
+print("Using append():method")
+n=int(input("Enter a value:"))
+list.append(n)
+print("The list after appended",n,"is",list)
+print("Using insert():method")
+n=int(input("Enter index value:"))
+m=int(input("Enter the value to be inserted:"))
+list.insert(n,m)
+print("the list after inserted ",m,"in index",n,"is",list)
+print("using sum():method")
+x=sum(list)
+print("the sum of list is",x)
+print("Using():method")
+n=int(input("Enter a value:"))
+w=list.count(n)
+print("the occurance of ",n,"in the list is",w,"times")
+print("Using len():method")
+l=len(list)
+print("The lenth of list is",l)
+print("using max():method")
+r=m in(list)
+print("The minimun value in list is",r)
+print("Using max():method")
+list.sort()
+print("The sorted list is",list)
+print("Using pop():mehtod")
+n=int(input("Enter index value:"))
+list.pop(n)
+print("The list after propped the value form index position",n,"is",list)
+print("Using remove():Method:")
+n=int(input("Entre a value:"))
+list.remove(n)
+print("The list after removing the value",n,"is",list)
+list1=[int(x)for x in input("Enter the element :").split()]
+print("list",list1)
+print("Using extend():method")
+list.extend(list1)
+print("the extented list is",list)
 
-print("Maximum:", max(t))
 
-print("Minimum:", min(t))
-
-print("Sum:", sum(t))
-output:
-
-
-
+"""
+OUTPUT
+LIST METHOD
+Enter the element:1 5 7 4 2 3 6 
+The element of list are: [1, 5, 7, 4, 2, 3, 6]
+Using append():method
+Enter a value:8
+The list after appended 8 is [1, 5, 7, 4, 2, 3, 6, 8]
+Using insert():method
+Enter index value:0
+Enter the value to be inserted:0
+the list after inserted  0 in index 0 is [0, 1, 5, 7, 4, 2, 3, 6, 8]
+using sum():method
+the sum of list is 36
+Using():method
+Enter a value:4
+the occurance of  4 in the list is 1 times
+Using len():method
+The lenth of list is 9
+using max():method
+The minimun value in list is True
+Using max():method
+The sorted list is [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Using pop():mehtod
+Enter index value:2
+The list after propped the value form index position 2 is [0, 1, 3, 4, 5, 6, 7, 8]
+Using remove():Method:
+Entre a value:5
+The list after removing the value 5 is [0, 1, 3, 4, 6, 7, 8]
+Enter the element :0 1 2 3 4 5 
+list [0, 1, 2, 3, 4, 5]
+Using extend():method
+the extented list is [0, 1, 3, 4, 6, 7, 8, 0, 1, 2, 3, 4, 5]
+"""
 
 
 
 
 18.class Student:
-
     def __init__(self, regno, name, m1, m2, m3):
         self.regno = regno
         self.name = name
         self.m1 = m1
         self.m2 = m2
         self.m3 = m3
-
     def calculate(self):
         total = self.m1 + self.m2 + self.m3
         avg = total / 3
-
         if avg >= 80:
             grade = "A"
         elif avg >= 60:
             grade = "B"
         else:
-            grade = "C"
-
+            grade = "C
         print("Register No:", self.regno)
         print("Name:", self.name)
         print("Total:", total)
         print("Average:", avg)
         print("Grade:", grade)
-
-
 s = Student(101,"Bharath",95,96,100)
 s.calculate()
-output:Register No: 101
+
+output:
+Register No: 101
 Name: Bharath
 Total: 291
 Average: 97.0
 Grade: A
 
-
-
-
-
 19.class Person:
-
 def __init__(self,name):
 self.name = name
-
-
 class Employee(Person):
-
 def __init__(self,name,empid,salary,designation):
 Person.__init__(self,name)
 self.empid = empid
 self.salary = salary
 self.designation = designation
-
 def display(self):
 print("Name:",self.name)
 print("Employee ID:",self.empid)
 print("Salary:",self.salary)
 print("Designation:",self.designation)
-
-
 e = Employee("Bharath",524,75000,"HR")
 e.display()
-output:Name: Bharath
+output:
+Name: Bharath
 Employee ID: 524
 Salary: 75000
 Designation: HR
 
 
 
-</body>
-</html>
+
