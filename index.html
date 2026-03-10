@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    6.table = int(input("Which table? "))
+    n = int(input("Enter the limit: "))
+    
+    for i in range(1, n+1):
+    print(table, "*", i, "=", table*i)
+    output:
+    Which table? 2
+    Enter the limit: 5
+    
+    2 * 1 = 2
+    2 * 2 = 4
+    2 * 3 = 6
+    2 * 4 = 8
+    2 * 5 = 10
+
+
+    
+    7.n = int(input("Enter a number: "))
+    rev = 0
+    
+    while n > 0:
+    r = n % 10
+    rev = rev * 10 + r
+    n = n // 10
+    
+    print("Reverse of the given number is:", rev)
+    output:
+    Enter a number: 543
+    Reverse of the given number is: 345
+
+
+
+    8.n = int(input("Enter number of rows: "))
+    
+    for i in range(1, n+1):
+    print(" "*(n-i), end="")
+    print("* "*i)
+    output:
+    Enter number of rows: 5
+    
+    *
+    * *
+    * * *
+    * * * *
+    * * * * *
+
+
+    9.print("Enter numbers separated by space:")
+    lst = list(map(int, input().split()))
+    
+    print("Maximum value is:", max(lst))
+    print("Minimum value is:", min(lst))
+    output:
+    Enter numbers separated by space:
+    2 4 6 8 10
+    
+    Maximum value is: 10
+    Minimum value is: 2
+
+
+
+    10.def findall(lst):
+    positive = 0
+    negative = 0
+    zero = 0
+    
+    for x in lst:
+    if x > 0:
+    positive += 1
+    elif x < 0: negative +=1 else: zero +=1 print("No of positive numbers:", positive) print("No of negative numbers:",
+        negative) print("No of zeros:", zero) lst=list(map(int, input("Enter numbers: ").split()))
+    findall(lst)
+    output:Enter numbers: 12 40 -23 -4 0
+
+No of positive numbers: 2
+No of negative numbers: 2
+No of zeros: 1
+
+
+
+
+11.import array as arr
+
+# create array
+array1 = arr.array('i', [int(x) for x in input("Enter elements: ").split()])
+
+print("Original array:", array1)
+
+# Append
+n = int(input("Enter element to append: "))
+array1.append(n)
+print("After append:", array1)
+
+# Insert
+p = int(input("Enter position: "))
+v = int(input("Enter value: "))
+array1.insert(p, v)
+print("After insert:", array1)
+
+# Pop
+a = int(input("Enter index to pop: "))
+array1.pop(a)
+print("After pop:", array1)
+
+# Remove
+r = int(input("Enter element to remove: "))
+array1.remove(r)
+print("After remove:", array1)
+
+# Reverse
+array1.reverse()
+print("After reverse:", array1)
+
+# Length
+print("Length:", len(array1))
+
+# Sum
+print("Sum:", sum(array1))
+
+# Convert to list
+print("Array to list:", array1.tolist())
+output:Enter elements: 1 2 3 4
+Original array: array('i', [1, 2, 3, 4])
+Enter element to append: 5
+After append: array('i', [1, 2, 3, 4, 5])
+Enter position: 2
+Enter value: 10
+After insert: array('i', [1, 2, 10, 3, 4, 5])
+Enter index to pop: 3
+After pop: array('i', [1, 2, 10, 4, 5])
+Enter element to remove: 10
+After remove: array('i', [1, 2, 4, 5])
+After reverse: array('i', [5, 4, 2, 1])
+Length: 4
+Sum: 12
+Array to list: [5, 4, 2, 1]
+
+
+
+12.n = int(input("Enter n: "))
+
+total = 0
+for i in range(1, n+1):
+    total = total + i
+
+print("Sum =", total)
+output:Enter n: 5
+Sum = 15
+
+
+
+13.text = input("Enter a string: ")
+
+count = 0
+
+for ch in text:
+    if ch in "aeiouAEIOU":
+        count += 1
+
+print("Number of vowels =", count)
+output:Enter a string: welcome
+Number of vowels = 3
+
+
+
+
+14.import numpy as np
+
+A = np.array([[1,2,3],[4,5,6]])
+B = np.array([[1,2],[3,4],[5,6]])
+
+C = np.dot(A,B)
+
+print("Matrix A:")
+print(A)
+
+print("Matrix B:")
+print(B)
+
+print("Multiplication Result:")
+print(C)
+output:Matrix A
+[[1 2 3]
+ [4 5 6]]
+
+Matrix B
+[[1 2]
+ [3 4]
+ [5 6]]
+
+Multiplication Result
+[[22 28]
+ [49 64]]
+
+
+
+ 15.text = "Hello everybody"
+
+print("Original:", text)
+
+print("Find:", text.find("body"))
+
+print("Replace:", text.replace("body","Everybody"))
+
+print("Count of 'o':", text.count("o"))
+
+print("Upper:", text.upper())
+
+print("Lower:", text.lower())
+
+print("Swapcase:", text.swapcase())
+output:
+
+
+
+16.t = (1,4,7,6,5,3,2)
+
+print("Tuple:", t)
+
+print("Index of 4:", t.index(4))
+
+print("Maximum:", max(t))
+
+print("Minimum:", min(t))
+
+print("Sum:", sum(t))
+output:
+
+
+
+
+
+
+
+18.class Student:
+
+    def __init__(self, regno, name, m1, m2, m3):
+        self.regno = regno
+        self.name = name
+        self.m1 = m1
+        self.m2 = m2
+        self.m3 = m3
+
+    def calculate(self):
+        total = self.m1 + self.m2 + self.m3
+        avg = total / 3
+
+        if avg >= 80:
+            grade = "A"
+        elif avg >= 60:
+            grade = "B"
+        else:
+            grade = "C"
+
+        print("Register No:", self.regno)
+        print("Name:", self.name)
+        print("Total:", total)
+        print("Average:", avg)
+        print("Grade:", grade)
+
+
+s = Student(101,"Bharath",95,96,100)
+s.calculate()
+output:Register No: 101
+Name: Bharath
+Total: 291
+Average: 97.0
+Grade: A
+
+
+
+
+
+19.class Person:
+
+def __init__(self,name):
+self.name = name
+
+
+class Employee(Person):
+
+def __init__(self,name,empid,salary,designation):
+Person.__init__(self,name)
+self.empid = empid
+self.salary = salary
+self.designation = designation
+
+def display(self):
+print("Name:",self.name)
+print("Employee ID:",self.empid)
+print("Salary:",self.salary)
+print("Designation:",self.designation)
+
+
+e = Employee("Bharath",524,75000,"HR")
+e.display()
+output:Name: Bharath
+Employee ID: 524
+Salary: 75000
+Designation: HR
+
+
+
+</body>
+</html>
